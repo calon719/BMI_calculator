@@ -1,0 +1,181 @@
+.container{
+    margin: 0 auto;
+    max-width: 1024px;
+}
+.header{
+    background: $quinary;
+    .container{
+        padding: 74px 0 74px 173px;
+        display: flex;
+    }
+    img{
+        margin-right: 97px;
+    }
+    .BMItext{
+        color: $primary;
+    }
+    input{
+        margin-top: 7px;
+        border-radius: 6px;
+        border: 2px solid $primary;
+        background: $octonary;
+        color: $nonary;
+        padding: 3px 8px 2px 8px;
+        margin-right: 53px;
+    }
+    ::-webkit-input-placeholder{
+        color: $nonary;
+    }
+    .height{
+        margin-bottom: 23px;
+    }
+    .calBtn{
+        @include circleBox;
+        width: 120px;
+        height: 120px;
+        font-size: $fontNomal;
+    }
+    .calBtn{
+        background: $primary;
+        &:hover{
+            box-shadow: 0 1px 6px 3px $senary;
+        }
+        &:active{
+            background: $septenary;
+        }
+    }
+    .result{
+        display: flex;
+        align-items: center;
+        font-size: $fontLarge;
+    }
+    .result-circle{
+        @include circleBox;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 120px;
+        text-align: center;
+        margin-right: 18px;
+        position: relative;
+        p{
+            font-size: $fontLarge;
+        }
+    }
+    .result-circle p{
+        margin-top: .5em;
+        line-height: 1.5;
+    }
+    .result-circle span{
+        font-size: $fontMini;
+    }
+    .result-btn{
+        @include circleBox;
+        display: block;
+        height: 30px;
+        width: 30px;
+        padding-left: 4.5px;
+        padding-top: 1px;
+        border: 3px solid $quinary;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        &:hover{
+            box-shadow: 0 1px 6px 3px $senary;
+        }
+    }
+}
+.content{
+    background: $denary;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h2{
+        font-size: $fontNomal;
+        margin-bottom: .3em;
+    }
+    span{
+        font-size: $fontTiny;
+    }
+    p{
+        margin-top: 1.5em;
+    }
+    .deleteBtn{
+        display: block;
+        text-decoration: none;
+        font-size: $fontMini;
+        border: 2px solid $secondary;
+        padding: 2px 3px;
+        color: $secondary;
+        margin-top: 1.5em;
+        border-radius: 5px;
+        &:hover{
+            color: $undenary;
+            border: 2px solid $undenary;
+        }
+    }
+    .history{
+        width: 624px;
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: $fontBig;
+            padding: 20px 15px;
+            background: $tertiary;
+            margin-top: 16px;
+        }
+        p{
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+        }
+        span{
+            margin-right: 7px;
+        }
+        .txt{
+            display: flex;
+            align-items: center;
+        }
+        a{
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: url(../images/trash.png) no-repeat;
+            background-size: 25px;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+        img{
+            width: 100%;
+        }
+    }
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    background: $primary;
+    img{
+        width: 56px;
+        height: 56px;
+        margin: 17px 0;
+    }
+}
+
+.hidden{
+    display: none !important;
+}
+
+.warng{
+    color: #ff1e00;
+    position:absolute;
+    left: 40%;
+    top: 50px;
+}

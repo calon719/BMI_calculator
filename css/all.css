@@ -1,0 +1,347 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button, button:focus {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+img {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: PingFangTC-Regular, 微軟正黑體;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.header {
+  background: #424242;
+}
+.header .container {
+  padding: 74px 0 74px 173px;
+  display: flex;
+}
+.header img {
+  margin-right: 97px;
+}
+.header .BMItext {
+  color: #FFD366;
+}
+.header input {
+  margin-top: 7px;
+  border-radius: 6px;
+  border: 2px solid #FFD366;
+  background: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.5);
+  padding: 3px 8px 2px 8px;
+  margin-right: 53px;
+}
+.header ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.header .height {
+  margin-bottom: 23px;
+}
+.header .calBtn {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  font-size: 24px;
+}
+.header .calBtn {
+  background: #FFD366;
+}
+.header .calBtn:hover {
+  box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64);
+}
+.header .calBtn:active {
+  background: #DEA821;
+}
+.header .result {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+}
+.header .result-circle {
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  margin-right: 18px;
+  position: relative;
+}
+.header .result-circle p {
+  font-size: 32px;
+}
+.header .result-circle p {
+  margin-top: 0.5em;
+  line-height: 1.5;
+}
+.header .result-circle span {
+  font-size: 14px;
+}
+.header .result-btn {
+  border-radius: 50%;
+  display: block;
+  height: 30px;
+  width: 30px;
+  padding-left: 4.5px;
+  padding-top: 1px;
+  border: 3px solid #424242;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.header .result-btn:hover {
+  box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64);
+}
+
+.content {
+  background: #ededed;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.content .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content h2 {
+  font-size: 24px;
+  margin-bottom: 0.3em;
+}
+.content span {
+  font-size: 12px;
+}
+.content p {
+  margin-top: 1.5em;
+}
+.content .deleteBtn {
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  border: 2px solid #4A4A4A;
+  padding: 2px 3px;
+  color: #4A4A4A;
+  margin-top: 1.5em;
+  border-radius: 5px;
+}
+.content .deleteBtn:hover {
+  color: #CF000F;
+  border: 2px solid #CF000F;
+}
+.content .history {
+  width: 624px;
+}
+.content .history li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 20px 15px;
+  background: #ffffff;
+  margin-top: 16px;
+}
+.content .history p {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+}
+.content .history span {
+  margin-right: 7px;
+}
+.content .history .txt {
+  display: flex;
+  align-items: center;
+}
+.content .history a {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url(../images/trash.png) no-repeat;
+  background-size: 25px;
+}
+.content .history a:hover {
+  opacity: 0.7;
+}
+.content .history img {
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background: #FFD366;
+}
+.footer img {
+  width: 56px;
+  height: 56px;
+  margin: 17px 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.warng {
+  color: #ff1e00;
+  position: absolute;
+  left: 40%;
+  top: 50px;
+}
+
+.text-low {
+  color: #31BAF9;
+}
+
+.text-normal {
+  color: #86D73F;
+}
+
+.text-obeseI {
+  color: #FF982D;
+}
+
+.text-obeseII {
+  color: #FF6C03;
+}
+
+.text-obeseIIII {
+  color: #FF1200;
+}
+
+.border-low {
+  border: 6px solid #31BAF9;
+}
+
+.border-normal {
+  border: 6px solid #86D73F;
+}
+
+.border-obeseI {
+  border: 6px solid #FF982D;
+}
+
+.border-obeseII {
+  border: 6px solid #FF6C03;
+}
+
+.border-obeseIIII {
+  border: 6px solid #FF1200;
+}
+
+.borderLeft-low {
+  border-left: 7px solid #31BAF9;
+}
+
+.borderLeft-normal {
+  border-left: 7px solid #86D73F;
+}
+
+.borderLeft-obeseI {
+  border-left: 7px solid #FF982D;
+}
+
+.borderLeft-obeseII {
+  border-left: 7px solid #FF6C03;
+}
+
+.borderLeft-obeseIIII {
+  border-left: 7px solid #FF1200;
+}
+
+.bg-low {
+  background: #31BAF9;
+}
+
+.bg-normal {
+  background: #86D73F;
+}
+
+.bg-obeseI {
+  background: #FF982D;
+}
+
+.bg-obeseII {
+  background: #FF6C03;
+}
+
+.bg-obeseIIII {
+  background: #FF1200;
+}

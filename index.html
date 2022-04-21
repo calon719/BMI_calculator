@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMIcalculator</title>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="header">
+        <div class="warng hidden">！！所輸入的資料有誤！！</div>
+        <div class="container">
+            <img src="images/BMICLogo.png" alt="BMIcalculatorLogo">
+            <div class="BMItext">
+                <p>身高 cm</p>
+                <input class="height" type="number" placeholder="請輸入身高">
+                <p><span>體重 kg</span></p>
+                <input class="weight" type="number" placeholder="請輸入體重">
+            </div>
+            <button class="calBtn">看結果</button>
+            <div class="result hidden">
+                <div class="result-circle">
+                    <p></p>
+                    <span>BMI</span>
+                    <button class="result-btn"><img src="images/icons_loop.png"></button>
+                </div>
+                <p class="result-state"></p>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <h2>BMI 紀錄</h2>
+            <span>保留最近十筆資料</span>
+            <a class="deleteBtn" href="#">清除歷史紀錄</a>
+            <ul class="history"></ul>
+            <p class="nothing">尚無資料</p>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="images/zTCbWJ4.png" alt="BMIcalculatorLogo">
+    </div>
+    <script src="js/all.js"></script>
+</body>
+</html>
+
+
+
+
+
